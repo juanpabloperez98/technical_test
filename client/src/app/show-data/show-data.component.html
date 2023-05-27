@@ -1,0 +1,126 @@
+<form [formGroup]="dataSearchForm" (ngSubmit)="onSubmit()" class="w-50 mb-5">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" formControlName="cc" placeholder="CC/RUT">
+    </div>
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" formControlName="typeOptions"  id="exampleRadios1" value="0" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Actor
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" formControlName="typeOptions"  id="exampleRadios2" value="1">
+        <label class="form-check-label" for="exampleRadios2">
+          Demandado
+        </label>
+      </div>
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+    </div>
+  </div>
+</form>
+<table *ngIf="data.length != 0" class="table">
+  <thead>
+    <tr>
+      <th scope="col">id_x</th>
+      <th scope="col">idJuicio</th>
+      <th scope="col">estadoActual_x</th>
+      <th scope="col">idMateria_x</th>
+      <th scope="col">idProvincia_x</th>
+      <th scope="col">idCanton_x</th>
+      <th scope="col">idJudicatura_x</th>
+      <th scope="col">nombreDelito_x</th>
+      <th scope="col">fechaIngreso_x</th>
+      <th scope="col">iEDocumentoAdjunto_x</th>
+      <th scope="col">nombre_x</th>
+      <th scope="col">cedula_x</th>
+      <th scope="col">idEstadoJuicio_x</th>
+      <th scope="col">nombreMateria_x</th>
+      <th scope="col">nombreEstadoJuicio_x</th>
+      <th scope="col">nombreJudicatura_x</th>
+      <th scope="col">nombreTipoResolucion_x</th>
+      <th scope="col">nombreTipoAccion_x</th>
+      <th scope="col">fechaProvidencia_x</th>
+      <th scope="col">nombreProvidencia_x</th>
+      <th scope="col">nombreProvincia_x</th>
+      <th scope="col">idJudicatura_y</th>
+      <th scope="col">nombreJudicatura_y</th>
+      <th scope="col">ciudad</th>
+      <th scope="col">lstIncidenteJudicatura</th>
+      <th scope="col">id_y</th>
+      <th scope="col">estadoActual_y</th>
+      <th scope="col">idMateria_y</th>
+      <th scope="col">idProvincia_y</th>
+      <th scope="col">idCanton_y</th>
+      <th scope="col">idJudicatura_y</th>
+      <th scope="col">nombreDelito_y</th>
+      <th scope="col">fechaIngreso_y</th>
+      <th scope="col">iEDocumentoAdjunto_y</th>
+      <th scope="col">nombre_y</th>
+      <th scope="col">cedula_y</th>
+      <th scope="col">idEstadoJuicio_y</th>
+      <th scope="col">nombreMateria_y</th>
+      <th scope="col">nombreEstadoJuicio_y</th>
+      <th scope="col">nombreJudicatura_y</th>
+      <th scope="col">nombreTipoResolucion_y</th>
+      <th scope="col">nombreTipoAccion_y</th>
+      <th scope="col">fechaProvidencia_y</th>
+      <th scope="col">nombreProvidencia_y</th>
+      <th scope="col">nombreProvincia_y</th>
+      <th scope="col">tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>{{ item.id_x }}</td>
+      <td>{{ item.idJuicio }}</td>
+      <td>{{ item.estadoActual_x }}</td>
+      <td>{{ item.idMateria_x }}</td>
+      <td>{{ item.idProvincia_x }}</td>
+      <td>{{ item.idCanton_x }}</td>
+      <td>{{ item.idJudicatura_x }}</td>
+      <td>{{ item.nombreDelito_x }}</td>
+      <td>{{ item.fechaIngreso_x }}</td>
+      <td>{{ item.iEDocumentoAdjunto_x }}</td>
+      <td>{{ item.nombre_x }}</td>
+      <td>{{ item.cedula_x }}</td>
+      <td>{{ item.idEstadoJuicio_x }}</td>
+      <td>{{ item.nombreMateria_x }}</td>
+      <td>{{ item.nombreEstadoJuicio_x }}</td>
+      <td>{{ item.nombreJudicatura_x }}</td>
+      <td>{{ item.nombreTipoResolucion_x }}</td>
+      <td>{{ item.nombreTipoAccion_x }}</td>
+      <td>{{ item.fechaProvidencia_x }}</td>
+      <td>{{ item.nombreProvidencia_x }}</td>
+      <td>{{ item.nombreProvincia_x }}</td>
+      <td>{{ item.idJudicatura_y }}</td>
+      <td>{{ item.nombreJudicatura_y }}</td>
+      <td>{{ item.ciudad }}</td>
+      <td>{{ item.lstIncidenteJudicatura }}</td>
+      <td>{{ item.id_y }}</td>
+      <td>{{ item.estadoActual_y }}</td>
+      <td>{{ item.idMateria_y }}</td>
+      <td>{{ item.idProvincia_y }}</td>
+      <td>{{ item.idCanton_y }}</td>
+      <td>{{ item.idJudicatura_y }}</td>
+      <td>{{ item.nombreDelito_y }}</td>
+      <td>{{ item.fechaIngreso_y }}</td>
+      <td>{{ item.iEDocumentoAdjunto_y }}</td>
+      <td>{{ item.nombre_y }}</td>
+      <td>{{ item.cedula_y }}</td>
+      <td>{{ item.idEstadoJuicio_y }}</td>
+      <td>{{ item.nombreMateria_y }}</td>
+      <td>{{ item.nombreEstadoJuicio_y }}</td>
+      <td>{{ item.nombreJudicatura_y }}</td>
+      <td>{{ item.nombreTipoResolucion_y }}</td>
+      <td>{{ item.nombreTipoAccion_y }}</td>
+      <td>{{ item.fechaProvidencia_y }}</td>
+      <td>{{ item.nombreProvidencia_y }}</td>
+      <td>{{ item.nombreProvincia_y }}</td>
+      <td>{{ item.tipo }}</td>
+    </tr>
+  </tbody>
+</table>

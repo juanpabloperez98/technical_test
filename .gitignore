@@ -1,0 +1,38 @@
+# Ignorar archivos generados por Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos generados por el entorno de desarrollo
+.idea/
+.vscode/
+
+# Ignorar archivos de registro y salida
+logs/
+*.log
+
+# Ignorar archivos de configuración local
+.env
+.env.*
+
+# Ignorar archivos generados por el sistema operativo
+.DS_Store
+
+# Ignorar archivos de dependencias y entorno virtual
+venv/
+env/
+entorno/
+
+# Ignorar archivos de base de datos
+*.db
+
+# Ignorar el directorio de compilación
+__pycache__/
+
+# Ignorar archivos de prueba y cobertura
+tests/
+coverage/
+
+# Ignorar el directorio de compilación de FastAPI
+.venv/
