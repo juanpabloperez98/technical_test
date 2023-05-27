@@ -72,7 +72,7 @@ Primero se recomienda correr el script que se encuentra en la carpeta punto1
 
 Luego puede levantar el servidor api, dirigiendose a la carpeta de api y ejecutando
 
-> python main:app --reload
+> uvicorn main:app --reload
 
 Una vez levantado el servidor puedes acceder a la documentación de la API dirigiendose a
 
